@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Acme|Nosifer|Playfair+Display+SC|Vollkorn" rel="stylesheet"></head>
+
+<style>
+
+/* Flipper styling*/
+.item1 {
+   grid-area: header;
+  height: 625px;
+  opacity: 0.7;
+  width: 82%;
+  margin-left: 220px;
+
+  }
+
+.flip{
+  font-size: 18px;
+}
+
+  .flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+	.flip-container:hover .flipper,
+  .flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 900px;
+	height: 625px;
+  margin-left: 40px;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+  background-size:cover;
+	z-index: 0;
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(150deg);
+	background: #f8f8f8;
+  font-family: 'Nosifer', cursive;
+  width: 900px;
+	height: 625px;
+  margin-left: 50px;
+}
+/*End of flipper style*/
+
+
+/*  Sidebar styling*/
+.item2 { grid-area: menu;
+  margin-top: 0px;
+  height: 95%;
+  width: 60mm;
+  opacity: 0.7;
+  position: fixed;
+  z-index: 1;
+  color: blue;
+  background-color: grey;
+  font-family: 'Nosifer', cursive;
+  }
+
+.co{
+  margin-top: -20%;
+}
+
+/*About me styling*/
+.item3 { grid-area: main;
+    font-size: 17px;
+    font-family: 'Acme', sans-serif;
+    margin-left: 346px;
+    height: 190px;
+    width: 800px;
+    opacity: 0.9;
+  }
+  h3{
+    font-family: 'Playfair Display SC', serif;
+  }
+
+
+/*Education, Experiences and languages style*/
+.item4 { grid-area: right;
+  margin-top: 60mm;
+  margin-left: -230mm;
+  margin-right: 50mm;
+}
+
+
+/* Footer and contact details style*/
+.item5 { grid-area: footer;
+  height:200px;
+  color: white;
+  width: 129%;
+  margin-left: -68px;
+  margin-top: 30%;
+  background-color: black;
+  }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  /*background-color: blue;*/
+}
+
+.grid-container > div {
+  background-color: ;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+#copy {
+  margin-left: -500px;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+#f {
+  margin-left: 0mm;
+  margin-top: -6px;
+}
+
+#pics {
+  margin-left: 210mm;
+  margin-top: -30px;
+
+}
+
+.edu{
+  margin-top: 10%;
+  margin-left: -40px;
+
+}
+
+.red{
+  margin-top: 5px;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+#img1{
+  margin-top: -50px;
+  margin-left: -500px;
+}
+#img2{
+  margin-right: 50mm;
+  margin-top: -300px;
+  margin-bottom: 70px;
+}
+#img3{
+  margin-left: 100px;
+  margin-top: -300px;
+  margin-bottom: 138px;
+}
+#img4{
+  margin-left: 400px;
+  margin-top: -300px;
+  margin-bottom: 205px;
+}
+
+
+		/*Navbar styling*/
+		.dropbtn {
+    background-color: lightblue;
+    color: black;
+    padding: -18px;
+
+    width: 50mm;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+		font-family: 'Nosifer', cursive;
+}
+
+	/*Sidebar styling*/
+.dropbtn2 {
+background-color: #999999;
+color: black;
+padding: -20px;
+width: 60mm;
+margin-left: -30mm;
+font-size: 18px;
+border: none;
+cursor: pointer;
+font-family: 'Nosifer', cursive;
+}
+
+#contact_info {
+    margin-top: -69mm;
+    margin-left: 1%;
+    width: 40mm;
+    font-size: 10px;
+  }
+
+  #contact_info2 {
+      margin-top: -69mm;
+      margin-left: 20%;
+      width: 40mm;
+      font-size: 13px;
+    }
+
+
+  .who_we{
+    margin-top: 9%;
+    margin-left: 6%;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: red;
+  }
+
+  .Who{
+    text-decoration: underline;
+    text-decoration-color: #f9dbdb;
+  }
+
+.dropdown {
+    position: static;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+		background-color: grey;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
+#draft{
+  text-align: center;
+  width: 50%;
+  margin-left: 22%;
+}
+
+.hrline{
+  width: 30%;
+}
+
+#lan1{
+  margin-left: -500px;
+  margin-bottom: 65px;
+}
+
+#lan2{
+  margin-left: -200px;
+  margin-top: 70px;
+}
+
+#lan3{
+  margin-left: 100px;
+  margin-bottom:  222px;
+  margin-top: -65mm;
+}
+
+#lan4{
+  margin-left: 400px;
+  margin-bottom:  290px;
+  margin-top: -54mm;
+}
+#para{
+  margin-left: 360px;
+  width: 130%;
+  font-size: 18px;
+  margin-top: -135px;
+  font-family: 'Nosifer', cursive;
+}
+
+.co{
+  margin-top: 265%;
+  text-align: center;
+  width: 60%;
+  color: black;
+}
+
+#email{
+  width: 15%;
+  font-size: 8px;
+}
+</style>
+<body>
+
+
+<div id="grid" class="grid-container">
+  <div class="item1">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+      <img src="IMG_20170811_105647265.jpg" alt="" width="850px" height="830px">
+      <span class="name"></span>
+    </div>
+    <div class="back">
+      <div class="back-logo">
+        <p>Melissa Meyers</p>
+        <p>084 639 4141</p>
+        </div>
+      <div class="back-title">melissameyers209@gmail.com</div>
+      <p>Junior Web Developer</p>
+      <p>I look forward to hearing from you regarding your availability to meet at earliest</p>
+
+
+          <div class="flip">
+            <img src="me..PNG" alt="width="350px" height="400px"">
+
+   </div>
+    </div>
+
+
+  </div>
+
+</div>
+    <div class="header-wrapper">
+
+  </div>
+  </div>
+  <div class="item2">
+
+<div class="sideNav ">
+
+  <div class="dropdown">
+    <button class="dropbtn"><p>Hi! I'm Melissa Meyers</p>
+</button>
+    <div class="dropdown-content">
+      <a href="#grid">Home</a>
+      <a href="#Who1">ABOUT ME</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#experience">EXPERIENCE</a>
+      <a href="#cont">CONTACT ME</a>
+    </div>
+
+<div class="co">
+
+    <div id="contact_info">
+<h3><span class="who_we"> Contact </span><span class="who">Info</span></h3>
+
+  <p><img src="phone-call.png" alt="" width="30" height="25"> 084 639 4141</p>
+   <p id="p"><img src="house.png" alt="" width="29" height="25">15 Swartysterhout Street, Bonteheuwel, Cape Town, 7764</p>
+
+</div>
+  </div>
+  </div>
+
+</div>
+ </div>
+
+  <div class="item3">
+
+<h3 id="Who1">Who is Melissa Meyers?</h3>
+  <p>I'm a young web developer seeking a great
+opportunity within a
+workplace to share my enthusiasm and
+ skills.
+I have a drive to stand
+out as independent and
+unique.
+I am always eager in taking
+up any challenge and always
+willing to overcome it at
+the end.  </div>
+
+  <div class="item4">
+
+    <h3 id="education" class="edu">E D U C A T I O N</h3>
+
+    <p>2013 -Matriculated Bonteheuwel Secondary School</p>
+    <p>ENGLISH</p>
+    <p>AFRIKAANS</p>
+    <p>MATHEMATICAL LITERACY</p>
+    <p>LIFE ORIENTATION</p>
+    <p>GEOGRAPHY</p>
+    <p>HISTORY</p>
+    <p>TOURISM</p>
+
+  <hr class="hrline">  <p>2017 -Life Choices Academy 6 Months Coding course</p>
+  <p id="draft">Recently completed a 6-month course with Lifechoices, learning the Most Important Job Skill of the Future, CODING! During the time at Lifechoices, I learned modern web languages(HTML, CSS, jQuery, JavaScript, Sass etc), design thinking and undergo professional development (i.e to work cohesively in a team and get practice with the tools used in the professional industry.) that has prepared me for the working world. I have gained confidence in being able to assess problems and design solutions to the problems.</p>
+
+<br>
+<br>
+<br>
+<h3 id="experience">E X P E R I E N C E</h3>
+    <p>MSV Corporation Call center/Team Leader/Admin (Sep 2015 - July 2017) </p>
+    <p>Contact Person: Nadia Stober Contact Detail: 073 708 8803</p>
+    <hr class="hrline">
+
+    <p>Voters Roll Officer (May 2014) </p>
+    <p>Contact Person: Sumaya Davids Contact Detail: 021 694 5119</p>
+    <hr class="hrline">
+
+    <p>Beauty Breaks Sales Agent ( July 2015 – September 2015) </p>
+    <p>Contact Person: Nadeem Benjamin Contact Detail: 087 820 4169</p>
+      <hr class="hrline">
+
+    <p>Clicks Shop Assistant/Cashier (September 2014 – July 2015)</p>
+     <p>Contact Person: Ryghana Samuels Contact Detail: 021 461 1078</p>
+     <hr class="hrline">
+
+
+  <h3 class="edu">L A N G U A G E S-L E A R N T</h3>
+  <p id="lan1">HTML</p> <img id="img1" src="html.PNG" alt=""height="70" width="70">
+  <p id="lan2">CSS</p> <img id="img2" src="Capture.PNG" alt=""height="70" width="70">
+  <p id="lan3">JavaScript</p> <img id="img3" src="JS.PNG" alt=""height="70" width="70">
+  <p id="lan4">jQuery</p> <img id="img4" src="jquery.PNG" alt=""height="70" width="92">
+
+  <div id="cont" class="item5">
+
+  <!-- <div id="cont" id="f">Follow me on:</div>
+  <div id="pics"> -->
+    <div id="contact_info2">
+<h3><span class="who_we"> Contact </span><span class="who">Info</span></h3>
+
+  <p><img src="phone-call.png" alt="" width="30" height="25"> 084 639 4141</p>
+   <p id="p"><img src="house.png" alt="" width="30" height="25"> 15 Swartysterhout Street, Bonteheuwel, Cape Town, 7764</p>
+
+  <p id="para">Don't watch the clock, do what it does...</p>
+
+  </div>
+</div>
+</div>
+  </div>
+
+
+
+  </div>
+</div>
+
+</body>
+</html>
